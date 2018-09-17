@@ -1,0 +1,451 @@
+$color: #61e9c2
+
+*
+  padding: 0
+  margin: 0
+  outline: none
+  &:focus
+    outline: none
+
+body
+  font-family: "Segoe UI - Semilight", sans-serif
+  font-size: 18px
+  //color: white
+  font-weight: 100
+  //background: #686868
+  letter-spacing: -1px
+  @media screen and (max-width: 1199px)
+    font-size: 16px
+    letter-spacing: normal
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 100
+
+h1
+  line-height: 30px
+  color: $color
+  text-transform: uppercase
+  letter-spacing: -2px
+
+ul
+  list-style: none
+
+a
+  color: white
+  text-decoration: none
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  -ms-transition: all 0.3s
+  -o-transition: all 0.3s
+  transition: all 0.3s
+  &:visited
+    color: white
+  &:hover
+    color: $color
+
+section
+  width: 100%
+
+.clearfix::after
+  content: ""
+  display: table
+  clear: both
+
+.section-opening
+  width: 30px
+  height: 30px
+  margin: 20px auto 10px
+  background-color: $color
+
+h2
+  text-align: center
+  color: #666666
+  font-size: 2em
+  padding: 5px
+  margin-bottom: 20px
+  text-transform: uppercase
+
+header .container.mobile
+  display: none
+  @media screen and (max-width: 1199px)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 60px
+
+.header-shadow
+  background-color: rgba(black, .5)
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+
+header
+  -webkit-transition: background-color 0.3s
+  -moz-transition: background-color 0.3s
+  -ms-transition: background-color 0.3s
+  -o-transition: background-color 0.3s
+  transition: background-color 0.3s
+  color: white
+  width: 100%
+  height: 80px
+  position: fixed
+  top: 0
+  z-index: 1000
+  @media screen and (max-width: 1199px)
+    height: 60px
+  .container
+    display: flex
+    justify-content: space-between
+    height: 80px
+    align-items: center
+    position: relative
+
+.menu
+  display: flex
+  height: 100%
+  align-items: center
+  a
+    display: flex
+    align-items: center
+    height: 100%
+    padding: 0 10px
+
+.number .fa-phone
+  -webkit-transform: rotate(90deg)
+  -moz-transform: rotate(90deg)
+  -ms-transform: rotate(90deg)
+  -o-transform: rotate(90deg)
+  transform: rotate(90deg)
+
+.hamburger-inner
+  background-color: $color !important
+  &:before, &:after
+    background-color: $color !important
+
+nav.mobile-menu
+  position: absolute
+  top: 60px
+  left: -100%
+  box-sizing: border-box
+  padding: 20px
+  width: 100%
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  -ms-transition: all 0.3s
+  -o-transition: all 0.3s
+  transition: all 0.3s
+  z-index: 5
+  background-color: rgba(black, .5)
+  &.visible
+    left: 0
+    a
+      padding: 10px
+
+#s-preview
+  color: white
+  background: url("img/bg.jpg") top center no-repeat
+  -webkit-background-size: cover
+  background-size: cover
+  @media screen and (max-width: 1199px)
+    -webkit-background-size: auto
+    background-size: auto
+    background: red
+  .container
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+
+#s-about-us
+  .container
+    background: url("img/bgabout.png") no-repeat bottom right
+    display: flex
+    justify-content: space-between
+    height: 450px
+    @media screen and (max-width: 1199px)
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      background: none
+    > div:first-child
+      max-width: 450px
+      padding: 10px
+      margin: 5px
+      border-left: 3px solid $color
+      height: 300px
+      @media screen and (max-width: 1199px)
+        border: 3px solid $color
+        height: auto
+      h3
+        font-size: 1.5em
+      p
+        padding: 15px 0
+        @media screen and (max-width: 1199px)
+          padding: 5px 0
+        &:last-child
+          padding-bottom: 0
+    .advantage
+      width: 650px
+      display: flex
+      justify-content: space-between
+      @media screen and (max-width: 1199px)
+        margin-top: 30px
+        width: 100%
+      div
+        width: 33%
+        display: flex
+        flex-direction: column
+        align-items: center
+        -webkit-transition: all 1.5s
+        -moz-transition: all 1.5s
+        -ms-transition: all 1.5s
+        -o-transition: all 1.5s
+        transition: all 1.5s
+        opacity: 0
+      .visible-adv
+        opacity: 1
+      i
+        font-size: 7em
+        color: $color
+        text-shadow: 0 0 15px $color
+        @media screen and (max-width: 1199px)
+          font-size: 3em
+      p
+        padding: 10px 0
+        font-size: 1.2em
+        text-align: center
+        @media screen and (max-width: 1199px)
+          font-size: 1em
+.btn
+  display: block
+  padding: 10px 30px
+  border: 2px solid white
+  border-radius: 100px
+  font-size: 0.9em
+  &:hover
+    border: 2px solid $color
+    box-shadow: inset 0 0 30px $color
+#s-services
+  @media screen and (max-width: 1199px)
+    padding-top: 100px
+  .container
+    .services
+      display: flex
+      justify-content: space-between
+      @media screen and (max-width: 1199px)
+        flex-direction: column
+        align-items: center
+      >div
+        margin: 40px
+        margin-top: 0
+        width: 500px
+        height: 281px
+        background: black
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        color: white
+        font-size: 2em
+        text-align: center
+        @media screen and (max-width: 1199px)
+          width: 300px
+          height: 170px
+          margin: 5px 0
+.additional
+  display: flex
+  justify-content: space-between
+  @media screen and (max-width: 1199px)
+    flex-wrap: wrap
+  div
+    width: 25%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border-right: 1px solid #dbdbdb
+    -webkit-transition: all .5s
+    -moz-transition: all .5s
+    -ms-transition: all .5s
+    -o-transition: all .5s
+    transition: all .5s
+    opacity: 0
+    box-sizing: border-box
+    @media screen and (max-width: 1199px)
+      width: 49%
+    &:first-child
+      transition-delay: 0.1s
+      -moz-transition-delay: 0.1s
+      -webkit-transition-delay: 0.1s
+      -o-transition-delay: 0.1s
+    &:nth-child(2)
+      transition-delay: 0.3s
+      -moz-transition-delay: 0.3s
+      -webkit-transition-delay: 0.3s
+      -o-transition-delay: 0.3s
+      @media screen and (max-width: 1199px)
+        border-right: none
+    &:nth-child(3)
+      transition-delay: 0.5s
+      -moz-transition-delay: 0.5s
+      -webkit-transition-delay: 0.5s
+      -o-transition-delay: 0.5s
+    &:last-child
+      border-right: none
+      transition-delay: 0.7s
+      -moz-transition-delay: 0.7s
+      -webkit-transition-delay: 0.7s
+      -o-transition-delay: 0.7s
+    &.visible-add
+      opacity: 1
+    p
+      text-align: center
+      color: #666666
+      font-size: 1.2em
+      @media screen and (max-width: 1199px)
+        font-size: 1em
+    i
+      font-size: 6em
+      color: $color
+      text-shadow: 0 0 10px $color
+      padding: 10px
+      @media screen and (max-width: 1199px)
+        font-size: 3em
+
+#s-team
+  margin-top: 20px
+  padding-top: 30px
+  background: url("img/bg-team.png") no-repeat top center
+  background-size: cover
+  position: relative
+  padding-bottom: 50px
+  .map-shadow
+    height: 100px
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    background: linear-gradient(rgba(black, .5), rgba(black, .0) 70%)
+  #owl
+    display: flex
+    justify-content: space-around
+    @media screen and (max-width: 1199px)
+      flex-direction: column
+      align-items: center
+    >div
+      display: flex
+      flex-direction: column
+      position: relative
+      width: 280px
+      height: 400px
+      overflow: hidden
+      background-color: red
+      box-shadow: 0 0 10px black
+      @media screen and (max-width: 1199px)
+        margin: 10px
+      .arrow
+        box-sizing: border-box
+        padding: 2px
+        width: 25px
+        height: 25px
+        position: absolute
+        border-top: 2px solid $color
+        border-left: 2px solid $color
+        transform: rotate(45deg)
+        left: 120px
+        top: 350px
+        -webkit-transition: all .5s
+        -moz-transition: all .5s
+        -ms-transition: all .5s
+        -o-transition: all .5s
+        transition: all .5s
+        .secondarrow
+          width: 16px
+          height: 16px
+          border-top: 2px solid $color
+          border-left: 2px solid $color
+      &:first-child
+        background: url("test.png") no-repeat top center
+      .teammate
+        -webkit-transition: all .5s
+        -moz-transition: all .5s
+        -ms-transition: all .5s
+        -o-transition: all .5s
+        transition: all .5s
+        position: absolute
+        top: 360px
+        left: 0
+        right: 0
+        border-top: 5px solid $color
+        height: 100%
+        background-color: rgba($color, 0.75)
+        h3
+          text-align: center
+          padding: 5px
+          font-size: 1.5em
+        span
+          display: block
+          text-align: center
+          padding: 5px 0 10px
+          font-size: 1.3em
+        p
+          text-align: center
+          font-size: 1.1em
+      &:hover
+        .teammate
+          top: 0
+        .arrow
+          top: -10px
+
+#s-gallery
+  padding: 50px
+  background: url("img/gallery-bg.png") no-repeat top center
+  background-size: cover
+  @media screen and (max-width: 1199px)
+    padding: 0px
+  .container
+    width: 1100px
+    position: relative
+    @media screen and (max-width: 1199px)
+      width: 80%
+
+.owl-nav.disabled
+  display: flex !important
+  justify-content: space-between
+  font-size: 70px
+  width: 1200px
+  position: absolute
+  top: 80px
+  left: -50px
+
+.owl-nav
+  @media screen and (max-width: 1199px)
+    display: flex !important
+    justify-content: space-between
+    font-size: 70px
+    width: 120%
+    position: absolute
+    top: 40%
+    left: -10%
+  @media screen and (max-width: 760px)
+    top: 27%
+
+.owl-prev, .owl-next
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  -ms-transition: all 0.3s
+  -o-transition: all 0.3s
+  transition: all 0.3s
+  &:hover
+    color: $color !important
+    @media screen and (max-width: 1199px)
+      color: black !important
+.owl-stage-outer
+  z-index: 1
+@media screen and (max-width: 1199px)
+  header .desktop
+    display: none
+

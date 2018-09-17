@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0; }
+  *:focus {
+    outline: none; }
+
+a {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  color: rgba(0, 0, 0, 0.7); }
+  a:visited {
+    color: gray; }
+  a:hover {
+    color: black; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=main.css.map */
